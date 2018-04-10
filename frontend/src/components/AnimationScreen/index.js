@@ -4,10 +4,10 @@ import Logo from '../Logo'
 import { H1 } from '../../common/typography'
 import Skodik from '../Skodik'
 
-const LisovnaAnim = () => (
+const LisovnaAnim = props => (
   <GlobalWrap>
     <Logo />
-    <H1>Začínáme v lisovně, pojďme se podívat!</H1>
+    <H1>{props.animTitle}</H1>
     <Skodik />
   </GlobalWrap>
 )
