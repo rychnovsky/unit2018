@@ -8,6 +8,20 @@ import CTAlink from '../../components/CTAlink'
 import SkodikHelp from '../../components/SkodikHelp'
 
 class LakovnaHra extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      success: false,
+    }
+  }
+
+  handleClick = () => {
+    this.setState({
+      success: true,
+    })
+  }
+
   render() {
     return (
       <GlobalWrap>
@@ -15,8 +29,8 @@ class LakovnaHra extends Component {
         <H1>Vyber si barvu auta</H1>
         <ImageWrap />
         <ColorBox />
-        <CTAlink to="/necodalsihonevimco">Tuhle barvu chci</CTAlink>
-        <SkodikHelp />
+        <CTAlink onClick={this.handleClick}>Tuhle barvu chci</CTAlink>
+        <SkodikHelp showDialog={this.state} />
       </GlobalWrap>
     )
   }
