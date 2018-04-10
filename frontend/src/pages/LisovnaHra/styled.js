@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import SkodikHelp from '../../components/SkodikHelp'
 
 export const Button = styled.button `
+
   width: 90px;
   height: 90px;
   background: #ffffff;

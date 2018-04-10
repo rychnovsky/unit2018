@@ -5,9 +5,17 @@ import { H1 } from '../../common/typography'
 import SkodikHelp from '../../components/SkodikHelp'
 import { TrioWrap, BtnWrap, Button, ImageWrap } from './styled'
 
+import QuizMain from '../../assets/img/lisovnaHra/01quizMain_carSceleton.svg'
+import AnswerBus from '../../assets/img/lisovnaHra/01quizAnswers_bus_WRONG.svg'
+import AnswerBoat from '../../assets/img/lisovnaHra/01quizAnswers_boat_WRONG.svg'
+import AnswerCar from '../../assets/img/lisovnaHra/01quizAnswers_carSceleton_RIGHT.svg'
+import AnswerTractor from '../../assets/img/lisovnaHra/01quizAnswers_tractor_WRONG.svg'
+import AnswerTrain from '../../assets/img/lisovnaHra/01quizAnswers_train_WRONG.svg'
+import AnswerPlane from '../../assets/img/lisovnaHra/01quizAnswers_plane_WRONG.svg'
+
 class LisovnaHra extends Component {
 
-  answer = 0;
+  answer = 2;
 
   constructor(props) {
     super(props);
@@ -71,17 +79,19 @@ class LisovnaHra extends Component {
       <GlobalWrap>
         <Logo />
         <H1>Jak asi vypadá karoserie auta?</H1>
-        <ImageWrap />
+        <ImageWrap>
+          <img src={QuizMain}/>
+        </ImageWrap>
         <BtnWrap>
           <TrioWrap>
-            <Button onClick={() => this.onSelect(0)} />
-            <Button onClick={() => this.onSelect(1)} />
-            <Button onClick={() => this.onSelect(2)} />
+            <Button onClick={() => this.onSelect(0)} > <img src={AnswerBoat}/> </Button>
+            <Button onClick={() => this.onSelect(1)} > <img src={AnswerBus}/> </Button>
+            <Button onClick={() => this.onSelect(2)} > <img src={AnswerCar}/> </Button>
           </TrioWrap>
           <TrioWrap>
-            <Button onClick={() => this.onSelect(3)} />
-            <Button onClick={() => this.onSelect(4)} />
-            <Button onClick={() => this.onSelect(5)} />
+            <Button onClick={() => this.onSelect(3)} > <img src={AnswerPlane}/> </Button>
+            <Button onClick={() => this.onSelect(4)} > <img src={AnswerTractor}/> </Button>
+            <Button onClick={() => this.onSelect(5)} > <img src={AnswerTrain}/> </Button>
           </TrioWrap>
           {skodik}
         </BtnWrap>
