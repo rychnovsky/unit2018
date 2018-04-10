@@ -8,6 +8,9 @@ const Button = styled(props => props.to ? <Link {...props} /> : <button {...prop
   border: none;
   cursor: pointer;
   display: block;
+
+  margin-top: 50px;
+
   max-width: ${props => props.restrict ? '100px' : '100%'};
   padding: 24px 53px;
   border-radius: 2px;

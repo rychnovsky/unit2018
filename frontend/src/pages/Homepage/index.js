@@ -1,23 +1,24 @@
 import React, { Component } from 'react'
 import { Wrap } from './styled'
 import CTAlink from '../../components/CTAlink'
-import { H1, H2 } from '../../common/typography'
+import { H1, H2, Text } from '../../common/typography'
 import Skodik from '../../components/Skodik'
 import Logo from '../../components/Logo'
+import GlobalWrap from '../../components/GlobalWrap'
 
 class Homepage extends Component {
   render() {
     return (
-      <Wrap>
+      <GlobalWrap>
         <Logo />
-        <H1>Výroba auta se škodíkem</H1>
+        <H1>Výroba auta se Škodíkem</H1>
         <Skodik />
-        <H2>Ahoj, já jsem Škodík!</H2>
-        <H2>Pojď se se mnou podívat, jak se vyrábí nové auto!</H2>
+        <Text center>Ahoj, já jsem Škodík!</Text>
+        <Text center>Pojď se se mnou podívat, jak se vyrábí nové auto!</Text>
         <CTAlink to="/game" restricted>
           Pojďme začít
         </CTAlink>
-      </Wrap>
+      </GlobalWrap>
     )
   }
 }

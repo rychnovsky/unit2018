@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { Img } from './'
 
-import { H2 } from '../../common/typography'
+import { H2, Text } from '../../common/typography'
 
 import { colors } from '../../common/variables'
 
@@ -15,14 +15,16 @@ const Wrap1 = styled(props => <Link {...props} />) `
   max-width: ${props => props.restrict ? '100px' : '100%'};
   
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   
   text-align: center;
-  width: 180px;
-  height: 60px;
+  width: 100%;
   border-radius: 50px;
 
   background: ${colors.lightGrey};
+
+  text-decoration: none;
+  color: #626262;
 
 `
 
@@ -39,12 +41,18 @@ export const ImgSmall = styled.img `
   padding-top: 5px;
 `
 
+const Text1 = styled.span `
+  line-height: 60px;
+  font-size: 18px;
+  margin-left: 30px;
+`
+
 class SkodikBtn extends Component {
 
   render() {
     return (
       <Wrap1 to={this.props.to}>
-        <H2>Klikni na mě</H2>
+        <Text1>Klikni na mě</Text1>
         <Wrap2>
           <ImgSmall src={ImgLink} />
         </Wrap2>

@@ -5,13 +5,18 @@ import { media } from '../../common/media'
 
 export const Img = styled.img `
   width: 150px;
-  display: flex;
+  height: 46px;
+  padding: 3px;
+
 `
 
 export const StyledLink = styled(Link) `
-  width: 150px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  margin-top: -20px;
   ${media.tablet `
-  top: 39px;
-  left: 43px;
+    top: 39px;
+    left: 43px;
   `};
 `
