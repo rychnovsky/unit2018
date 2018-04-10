@@ -1,20 +1,29 @@
-import React from 'react'
+import React, { Component } from 'react'
+
 import Button from './Color'
 import { Wrap } from './styled'
 
-const ColorsBox = () => (
-  <Wrap>
-    <Button color="red" />
-    <Button color="blue" />
-    <Button color="green" />
-    <Button color="purple" />
-    <Button color="orange" />
-    <Button color="yellow" />
-    <Button color="white" />
-    <Button color="grey" />
-    <Button color="black" />
-    <Button color="navy" />
-  </Wrap>
-)
+class ColorsBox extends Component {
+  handleClick = () => {
+    document.querySelectorAll('cls-1').fill = 'green'
+  }
+
+  render() {
+    return (
+      <Wrap>
+        <Button color="red" onClick={this.handleClick} />
+        <Button color="blue" onClick={this.handleClick} />
+        <Button color="green" onClick={this.handleClick} />
+        <Button color="purple" onClick={this.handleClick} />
+        <Button color="orange" onClick={this.handleClick} />
+        <Button color="yellow" onClick={this.handleClick} />
+        <Button color="white" onClick={this.handleClick} />
+        <Button color="grey" onClick={this.handleClick} />
+        <Button color="black" onClick={this.handleClick} />
+        <Button color="navy" onClick={this.handleClick} />
+      </Wrap>
+    )
+  }
+}
 
 export default ColorsBox
