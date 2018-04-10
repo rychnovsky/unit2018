@@ -10,7 +10,7 @@ import Image from './carIco'
 
 class LakovnaHra extends Component {
   constructor() {
-    super()
+    super();
 
     this.state = {
       success: false,
@@ -24,6 +24,34 @@ class LakovnaHra extends Component {
   }
 
   render() {
+
+    let skodik
+    if (this.state.success === true) {
+      skodik = (
+        <SkodikHelp
+          to="/montaz"
+          visible
+          linkText="Pokračovat"
+          title1="Správně, skvělá barva!"
+          text1="Chceš pokračovat dále?"
+        />
+      )
+    } else {
+      skodik = (
+        <SkodikHelp
+          onClick={() => {
+            this.setState({ success: null })
+          }}
+          visible={false}
+          linkText="Už vím!"
+          title1="Ovládání hry"
+          text1="Jen si vybereš barvu hry, vyber si takovou, která se ti líbí."
+          title2="Jaká barva?"
+          text2="Je úplně jedno, jakou barvu vybereš, kažád je správná."
+        />
+      )
+    }
+
     return (
       <GlobalWrap>
         <Logo />
@@ -33,7 +61,7 @@ class LakovnaHra extends Component {
         </ImageWrap>
         <ColorBox />
         <CTAlink onClick={this.handleClick}>Tuhle barvu chci</CTAlink>
-        <SkodikHelp showDialog={this.state} />
+        {skodik}
       </GlobalWrap>
     )
   }

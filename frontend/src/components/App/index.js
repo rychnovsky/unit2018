@@ -13,6 +13,7 @@ import Montaz from '../../pages/Montaz'
 import MontazHra from '../../pages/MontazHra'
 import Kontrola from '../../pages/Kontrola'
 import KontrolaHra from '../../pages/KontrolaHra'
+import Results from '../../pages/Results'
 
 const App = () => (
   <BrowserRouter>
@@ -29,6 +30,7 @@ const App = () => (
       <Route path="/montaz-hra" component={MontazHra} />
       <Route path="/kontrola" component={Kontrola} />
       <Route path="/kontrola-hra" component={KontrolaHra} />
+      <Route path="/konec" component={Results} />
     </Switch>
   </BrowserRouter>
 )

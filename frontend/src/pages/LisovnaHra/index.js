@@ -26,7 +26,7 @@ class LisovnaHra extends Component {
     if (position == this.answer) {
       this.onSuccess()
     } else {
-      this.onFail(position)
+      this.onFail()
     }
   }
 
@@ -36,14 +36,13 @@ class LisovnaHra extends Component {
     // TODO show popup and redirect - onNext();
   }
 
-  onFail = position => {
+  onFail = () => {
     this.setState({ success: false })
   }
 
   onNext = () => {}
 
   render() {
-    console.log(`rendeer ${this.state.success}`)
     let skodik
     if (this.state.success === true) {
       skodik = (
