@@ -32,15 +32,11 @@ class LisovnaHra extends Component {
 
   onSuccess = () => {
     this.setState({ success: true })
-    // TODO make answer box green
-    // TODO show popup and redirect - onNext();
   }
 
   onFail = () => {
     this.setState({ success: false })
   }
-
-  onNext = () => {}
 
   render() {
     let skodik
