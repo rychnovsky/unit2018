@@ -12,7 +12,7 @@ class SkodikInfo extends Component {
         <Text>{this.props.text1}</Text>
         <H1>{this.props.title2}</H1>
         <Text>{this.props.text2}</Text>
-        <CTALink to="hallo">{this.props.linkText}</CTALink>
+        <CTALink to={this.props.to} onClick={this.props.onClick} >{this.props.linkText}</CTALink>
       </ModalBox>
     )
   }

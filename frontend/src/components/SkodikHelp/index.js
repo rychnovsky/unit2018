@@ -24,10 +24,18 @@ const Img = styled.img `
 
 class SkodikSmall extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      modal: false,
+      modal: (this.props.visible == true),
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+
+    console.log("new props " + nextProps.visible);
+    this.state = {
+      modal: (nextProps.visible == true),
     }
   }
 
@@ -43,11 +51,13 @@ class SkodikSmall extends Component {
       <Wrap onClick={this.handleClick}>
         <Img src={ImgLink} />
         {this.state.modal && <SkodikInfo
-          linkText="Click"
-          title1="Ovládání hry"
-          text1="Jen zmáčkni vybranou karoserii a škodík ti řekne, jestli je správná"
-          title2=""
-          text2=""/>
+          to={this.props.to}
+          onClick={this.props.onClick}
+          linkText={this.props.linkText}
+          title1={this.props.title1}
+          text1={this.props.text1}
+          title2={this.props.title2}
+          text2={this.props.text2}/>
         }
       </Wrap>
     )
