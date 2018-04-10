@@ -11,12 +11,7 @@ export const Img = styled.img `
 `
 
 export const StyledLink = styled(Link) `
-  display: flex;
+  display: block;
   width: 100%;
-  justify-content: flex-start;
   margin-top: -20px;
-  ${media.tablet `
-    top: 39px;
-    left: 43px;
-  `};
 `
