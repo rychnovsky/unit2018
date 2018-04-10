@@ -18,7 +18,7 @@ const LisovnaAnim = props => (
   <GlobalWrap>
     <Logo />
     <HeadingWrap>
-      <H1>{props.animTitle}</H1>
+      <H1 center>{props.animTitle}</H1>
     </HeadingWrap>
     <SkodikHelp />
   </GlobalWrap>

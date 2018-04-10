@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 import CTAlink from '../../components/CTAlink'
+import { Link } from 'react-router-dom'
+
+import { Wrap, Socials } from './styled'
 import { H1, H2, Text } from '../../common/typography'
 import Logo from '../../components/Logo'
 import GlobalWrap from '../../components/GlobalWrap'
 
-import Badge from '../../assets/img/badge.svg'
+import ShareButton from 'react-social-share-buttons'
 
+import Badge from '../../assets/img/badge.svg'
 import ImageSrc from '../../assets/img/kontrolaHra/05_quiz_Choice4_RIGHT.svg'
 
 class Homepage extends Component {
@@ -20,9 +24,37 @@ class Homepage extends Component {
           Tohle je naše nové auto, pěkné, že? Chceš se podívat, jak to v takové velké továrně vypadá
           ve skutečnosti? Pojď si prohlédnout galerii!
         </Text>
-        <CTAlink to="https://google.com" restricted>
+        <CTAlink onClick={() => window.location = "https://google.com"} restricted>
           Prohlédnout galerii
         </CTAlink>
+
+        <br/>
+
+        <Socials>
+          <ShareButton
+            compact
+            socialMedia={'facebook'}
+            url={"http://skodik.web-rychnovsky.com"}
+            media={Badge}
+            text="Zvládl jsem to!"
+          />
+
+          <ShareButton
+            compact
+            socialMedia={'google-plus'}
+            url={"http://skodik.web-rychnovsky.com"}
+            media={Badge}
+            text="Zvládl jsem to!"
+          />
+
+          <ShareButton
+            compact
+            socialMedia={'twitter'}
+            url={"http://skodik.web-rychnovsky.com"}
+            media={Badge}
+            text="Zvládl jsem to!"
+          />
+        </Socials>
       </GlobalWrap>
     )
   }
