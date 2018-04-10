@@ -1,7 +1,6 @@
 export const colors = {
   skodaGreen: '#4BA82E',
-  lightGreen: '#ECECEC',
-  darkGrey: '#626262',
+  lightGrey: '#ECECEC',
 }
 
 export const sizes = {
