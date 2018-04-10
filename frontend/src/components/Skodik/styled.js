@@ -2,9 +2,10 @@ import styled from 'styled-components'
 import { colors } from '../../common/variables'
 
 export const Wrap = styled.div `
-  width: 140px;
-  height: 140px;
-  border: 5px solid ${colors.darkGrey};
+  width: 180px;
+  height: 180px;
+  margin: 20px 0;
+  border: 5px solid ${colors.lightGrey};
   border-radius: 100px;
   display: flex;
   align-items: center;
