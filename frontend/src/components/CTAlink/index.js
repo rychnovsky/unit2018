@@ -11,10 +11,11 @@ const Button = styled(props => <Link {...props} />) `
   max-width: ${props => props.restrict ? '100px' : '100%'};
   padding: 11px 30px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 7px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #fff;
-  background-color: ${colors.secondary};
+  color: ${colors.darkGrey};
+  background-color: ${colors.skodaGreen};
+
 `
 export default Button
