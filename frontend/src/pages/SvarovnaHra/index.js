@@ -12,6 +12,7 @@ class SvarovnaHra extends Component {
     return (
       <GlobalWrap>
         <Logo />
+        <video src={imgLink} />
         <H1>Pojď si zkusit svařování!</H1>
         <ImageWrap />
 

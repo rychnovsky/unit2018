@@ -8,9 +8,9 @@ class SkodikInfo extends Component {
     return (
       <ModalBox>
 
-        <H1>{this.props.title1}</H1>
+        <H1 center>{this.props.title1}</H1>
         <Text>{this.props.text1}</Text>
-        <H1>{this.props.title2}</H1>
+        <H1 center>{this.props.title2}</H1>
         <Text>{this.props.text2}</Text>
         <CTALink to={this.props.to} onClick={this.props.onClick} >{this.props.linkText}</CTALink>
       </ModalBox>
