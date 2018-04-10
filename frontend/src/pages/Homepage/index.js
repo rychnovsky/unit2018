@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import { Wrap } from './styled'
 import CTAlink from '../../components/CTAlink'
 import { H1, H2 } from '../../common/typography'
