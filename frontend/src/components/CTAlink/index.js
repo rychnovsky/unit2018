@@ -9,12 +9,16 @@ const Button = styled(props => <Link {...props} />) `
   cursor: pointer;
   display: block;
   max-width: ${props => props.restrict ? '100px' : '100%'};
-  padding: 11px 30px;
+  padding: 24px 53px;
+  border-radius: 2px;
+  
+  font-family: Roboto;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 16px;
   text-align: center;
-  border-radius: 7px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: ${colors.darkGrey};
+  color: #FFFFFF;
+  
   background-color: ${colors.skodaGreen};
 
 `
