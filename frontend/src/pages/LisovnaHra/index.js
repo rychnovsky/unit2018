@@ -5,6 +5,30 @@ import { H1 } from '../../common/typography'
 import { TrioWrap, BtnWrap, Button, ImageWrap } from './styled'
 
 class LisovnaHra extends Component {
+
+  answer = 0;
+
+  onSelect = (position) => {
+    if (position == this.answer){
+      this.onSuccess();
+    } else {
+      this.onFail(position);
+    }
+  };
+
+  onSuccess = () => {
+    //TODO make answer box green
+    //TODO show popup and redirect - onNext();
+  };
+
+  onFail = (position) => {
+
+  };
+
+  onNext = () => {
+
+  };
+
   render() {
     return (
       <GlobalWrap>
@@ -13,14 +37,14 @@ class LisovnaHra extends Component {
         <ImageWrap />
         <BtnWrap>
           <TrioWrap>
-            <Button />
-            <Button />
-            <Button />
+            <Button onClick={this.onSelect(0)} />
+            <Button onClick={this.onSelect(1)} />
+            <Button onClick={this.onSelect(2)} />
           </TrioWrap>
           <TrioWrap>
-            <Button />
-            <Button />
-            <Button />
+            <Button onClick={this.onSelect(3)} />
+            <Button onClick={this.onSelect(4)} />
+            <Button onClick={this.onSelect(5)} />
           </TrioWrap>
         </BtnWrap>
       </GlobalWrap>
