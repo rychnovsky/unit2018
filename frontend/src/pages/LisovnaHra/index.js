@@ -43,6 +43,7 @@ class LisovnaHra extends Component {
     let skodik;
     if (this.state.success === true){
       skodik = <SkodikHelp
+          to="/svarovna"
           visible={true}
           linkText="Pokračovat"
           title1="Správně, skvělá práce!"
@@ -50,12 +51,14 @@ class LisovnaHra extends Component {
 
     } else if (this.state.success === false){
       skodik = <SkodikHelp
+        onClick={() => {this.setState({success: null})}}
         visible={true}
         linkText="Zkusit znovu"
         title1="Kousek vedle, zkus to znovu"/>
 
     } else {
       skodik = <SkodikHelp
+          onClick={() => {this.setState({success: null})}}
           visible={false}
           linkText="Už vím!"
           title1="Ovládání hry"

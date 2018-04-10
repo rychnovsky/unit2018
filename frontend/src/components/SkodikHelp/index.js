@@ -51,6 +51,8 @@ class SkodikSmall extends Component {
       <Wrap onClick={this.handleClick}>
         <Img src={ImgLink} />
         {this.state.modal && <SkodikInfo
+          to={this.props.to}
+          onClick={this.props.onClick}
           linkText={this.props.linkText}
           title1={this.props.title1}
           text1={this.props.text1}
