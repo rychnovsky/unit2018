@@ -7,8 +7,11 @@ class SkodikInfo extends Component {
   render() {
     return (
       <ModalBox>
-        <H1>{this.props.h1}</H1>
-        <Text>{this.props.text}</Text>
+
+        <H1>{this.props.title1}</H1>
+        <Text>{this.props.text1}</Text>
+        <H1>{this.props.title2}</H1>
+        <Text>{this.props.text2}</Text>
         <CTALink to="hallo">{this.props.linkText}</CTALink>
       </ModalBox>
     )

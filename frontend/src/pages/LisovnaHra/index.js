@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import GlobalWrap from '../../components/GlobalWrap'
 import Logo from '../../components/Logo'
 import { H1 } from '../../common/typography'
+import SkodikHelp from '../../components/SkodikHelp'
 import { TrioWrap, BtnWrap, Button, ImageWrap } from './styled'
 
 class LisovnaHra extends Component {
@@ -47,6 +48,7 @@ class LisovnaHra extends Component {
             <Button onClick={this.onSelect(5)} />
           </TrioWrap>
         </BtnWrap>
+        <SkodikHelp/>
       </GlobalWrap>
     )
   }
