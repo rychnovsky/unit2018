@@ -12,8 +12,7 @@ import Img3 from '../../assets/img/kontrolaHra/05_quiz_Choice3_WRONG.svg'
 import Img4 from '../../assets/img/kontrolaHra/05_quiz_Choice4_RIGHT.svg'
 
 class KontrolaHra extends Component {
-
-  answer = 3;
+  answer = 3
 
   constructor(props) {
     super(props)
@@ -38,16 +37,15 @@ class KontrolaHra extends Component {
   }
 
   render() {
-
-    let skodik;
+    let skodik
     if (this.state.success === true) {
       skodik = (
         <SkodikHelp
           to="/konec"
           visible
-          linkText="Pokračovat"
+          linkText="HOTOVO"
           title1="Správně, skvělá práce!"
-          text1="Chceš pokračovat dále?"
+          text1="Auto si dokončil !"
         />
       )
     } else if (this.state.success === false) {
@@ -80,8 +78,7 @@ class KontrolaHra extends Component {
     return (
       <GlobalWrap>
         <Logo />
-        <H1>Vzberte auto, které nemá žádnou vadu</H1>
-        <ImageWrap />
+        <H1 center>Vzberte auto, které nemá žádnou vadu</H1>
         <BtnWrap>
           <DuoWrap>
             <Button onClick={() => this.onSelect(0)}>

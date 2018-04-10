@@ -13,6 +13,7 @@ import Img6 from '../../assets/img/komplet/parts_wheels.svg'
 import imgmain from '../../assets/img/komplet/01_main_picture.svg'
 
 import SkodikHelp from '../../components/SkodikHelp'
+import CTAlink from '../../components/CTAlink'
 
 class MontazHra extends Component {
   render() {
@@ -45,6 +46,7 @@ class MontazHra extends Component {
             </Button>
           </TrioWrap>
         </BtnWrap>
+        <CTAlink to="kontrola">Provest kontrolu</CTAlink>
         <SkodikHelp />
       </GlobalWrap>
     )

@@ -20,5 +20,6 @@ export const DuoWrap = styled.div `
 `
 export const BtnWrap = styled.div `
   display: flex;
+  margin-bottom: 110px;
   flex-direction: column;
 `
