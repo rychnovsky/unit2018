@@ -6,6 +6,7 @@ import { ImageWrap } from './styled'
 import ColorBox from './Colors'
 import CTAlink from '../../components/CTAlink'
 import SkodikHelp from '../../components/SkodikHelp'
+import Image from './carIco'
 
 class LakovnaHra extends Component {
   constructor() {
@@ -27,7 +28,9 @@ class LakovnaHra extends Component {
       <GlobalWrap>
         <Logo />
         <H1>Vyber si barvu auta</H1>
-        <ImageWrap />
+        <ImageWrap>
+          <Image />
+        </ImageWrap>
         <ColorBox />
         <CTAlink onClick={this.handleClick}>Tuhle barvu chci</CTAlink>
         <SkodikHelp showDialog={this.state} />
