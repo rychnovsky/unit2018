@@ -12,6 +12,7 @@ const Button = styled(props => <Link {...props} />) `
   padding: 24px 53px;
   border-radius: 2px;
   
+  text-decoration: none;
   font-family: Roboto;
   font-weight: bold;
   line-height: normal;
