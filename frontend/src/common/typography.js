@@ -3,20 +3,26 @@ import styled from 'styled-components'
 import { colors } from './variables'
 
 export const H1 = styled.h1 `
-  font-size: 3.4rem;
-  line-height: 4.1rem;
-  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  text-align: ${props => props.center ? 'center' : 'left'};
+  Font Size: 30px;
+  Line Height: 35px;
+  color: ${colors.text};
 `
 
 export const H2 = styled.h2 `
-  font-size: 3.4rem;
+  font-family: 'Roboto', sans-serif;
+  font-style: 'Bold';
   text-align: ${props => props.center ? 'center' : 'left'};
-  line-height: 4.1rem;
-  font-weight: 600;
+  Font Size: 20px;
+  Line Height: 23px;
+  color: ${colors.text};
 `
 
-export const Subheading = styled.div `
-  font-size: 1.4rem;
-  font-family: 'Hind';
-  color: ${colors.subheading};
+export const Text = styled.p `
+  font-family: 'Roboto', sans-serif;
+  text-align: ${props => props.center ? 'center' : 'left'};
+  Font Size: 20px;
+  Line Height: 23px;
+  color: ${colors.text};
 `

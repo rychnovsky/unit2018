@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import { Wrap } from './styled'
 
 class Homepage extends Component {
