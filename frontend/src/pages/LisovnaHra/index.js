@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import GlobalWrap from '../../components/GlobalWrap'
 import Logo from '../../components/Logo'
 import { H1 } from '../../common/typography'
-import { TrioWrap, BtnWrap, Button } from './styled'
+import { TrioWrap, BtnWrap, Button, ImageWrap } from './styled'
 
 class LisovnaHra extends Component {
   render() {
@@ -10,6 +10,7 @@ class LisovnaHra extends Component {
       <GlobalWrap>
         <Logo />
         <H1>Jak asi vypadá karoserie auta?</H1>
+        <ImageWrap />
         <BtnWrap>
           <TrioWrap>
             <Button />
