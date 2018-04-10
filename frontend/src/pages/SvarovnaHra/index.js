@@ -11,7 +11,7 @@ class SvarovnaHra extends Component {
     return (
       <GlobalWrap>
         <Logo />
-        <video src={imgLink} />
+        <video src={Gif} />
         <H1>Pojď si zkusit svařování!</H1>
         <Img src={Gif} />
         <CTAlink to="lakovna">Skvělé, vzhůru do lakovny</CTAlink>
