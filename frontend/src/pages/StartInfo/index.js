@@ -17,7 +17,7 @@ class StartInfo extends Component {
           dolním rohu.
         </Text>
         <Text>Pojďme to zkusit, klikni na mě!</Text>
-        <SkodikBtn to="start">Klikni na me</SkodikBtn>
+        <SkodikBtn to="lisovna">Klikni na me</SkodikBtn>
       </Wrap>
     )
   }
