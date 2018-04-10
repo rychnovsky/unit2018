@@ -4,8 +4,7 @@ import GlobalWrap from '../../components/GlobalWrap'
 import { H1, Text } from '../../common/typography'
 import CTAlink from '../../components/CTAlink'
 import AnimationScreen from '../../components/AnimationScreen'
-import ImageHeader from '../../components/ImageHeader'
-import ImgLink from '../../assets/img/škoďáček.svg'
+import VideoHeader from '../../components/VideoHeader'
 
 class Info extends Component {
   constructor(props) {
@@ -34,7 +33,7 @@ class Info extends Component {
     return (
       <GlobalWrap>
         <Logo />
-        <ImageHeader src={ImgLink} />
+        <VideoHeader src={this.props.src} />
         <H1>{this.props.h1}</H1>
         <Text>{this.props.text1}</Text>
         <Text>{this.props.text2}</Text>
