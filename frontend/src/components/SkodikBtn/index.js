@@ -1,6 +1,6 @@
 import React, { Component }  from 'react'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 import { Img } from './'
 
 import { H2, Text } from '../../common/typography'
@@ -8,6 +8,12 @@ import { H2, Text } from '../../common/typography'
 import { colors } from '../../common/variables'
 
 import ImgLink from '../../assets/img/škoďáček.svg'
+
+const pulsing = keyframes `
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+`
 
 const Wrap1 = styled(props => <Link {...props} />) `
   border: none;
@@ -25,15 +31,26 @@ const Wrap1 = styled(props => <Link {...props} />) `
 
   text-decoration: none;
   color: #626262;
+  animation: ${pulsing} 2s linear infinite;
+
 
 `
 
+const innerPulsing = keyframes `
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+`
+
 const Wrap2 = styled.div `
+  background: ${colors.lightGrey};
   border: 5px solid #DEDEDE;
   
   border-radius: 50px;
   width: 50px;
   height: 50px;
+
+  animation: ${innerPulsing} 2s linear infinite;
 `
 
 export const ImgSmall = styled.img `
