@@ -2,19 +2,18 @@ import React, { Component } from 'react'
 import GlobalWrap from '../../components/GlobalWrap'
 import Logo from '../../components/Logo'
 import { H1 } from '../../common/typography'
-import { ImageWrap } from './styled'
+import { Img } from './styled'
+import Gif from '../../assets/img/unit_gif.gif'
+import CTAlink from '../../components/CTAlink'
 
 class SvarovnaHra extends Component {
-
-
-
   render() {
     return (
       <GlobalWrap>
         <Logo />
         <H1>Pojď si zkusit svařování!</H1>
-        <ImageWrap />
-
+        <Img src={Gif} />
+        <CTAlink to="lakovna">Skvělé, vzhůru do lakovny</CTAlink>
       </GlobalWrap>
     )
   }
