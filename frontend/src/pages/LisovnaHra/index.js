@@ -6,65 +6,72 @@ import SkodikHelp from '../../components/SkodikHelp'
 import { TrioWrap, BtnWrap, Button, ImageWrap } from './styled'
 
 class LisovnaHra extends Component {
-
-  answer = 0;
+  answer = 0
 
   constructor(props) {
-    super(props);
-    this.state = {success: null};
+    super(props)
+    this.state = { success: null }
   }
 
-  onSelect = (position) => {
-    console.log("selected");
-    if (position == this.answer){
-      this.onSuccess();
+  onSelect = position => {
+    console.log('selected')
+    if (position == this.answer) {
+      this.onSuccess()
     } else {
-      this.onFail(position);
+      this.onFail(position)
     }
-  };
+  }
 
   onSuccess = () => {
-    this.setState({success: true});
-    //TODO make answer box green
-    //TODO show popup and redirect - onNext();
-  };
+    this.setState({ success: true })
+    // TODO make answer box green
+    // TODO show popup and redirect - onNext();
+  }
 
-  onFail = (position) => {
-    this.setState({success: false});
-  };
+  onFail = position => {
+    this.setState({ success: false })
+  }
 
-  onNext = () => {
-
-  };
+  onNext = () => {}
 
   render() {
-
-    console.log("rendeer " + this.state.success);
-    let skodik;
-    if (this.state.success === true){
-      skodik = <SkodikHelp
+    console.log(`rendeer ${this.state.success}`)
+    let skodik
+    if (this.state.success === true) {
+      skodik = (
+        <SkodikHelp
           to="/svarovna"
-          visible={true}
+          visible
           linkText="Pokračovat"
           title1="Správně, skvělá práce!"
-          text1="Chceš pokračovat dále?"/>
-
-    } else if (this.state.success === false){
-      skodik = <SkodikHelp
-        onClick={() => {this.setState({success: null})}}
-        visible={true}
-        linkText="Zkusit znovu"
-        title1="Kousek vedle, zkus to znovu"/>
-
+          text1="Chceš pokračovat dále?"
+        />
+      )
+    } else if (this.state.success === false) {
+      skodik = (
+        <SkodikHelp
+          onClick={() => {
+            this.setState({ success: null })
+          }}
+          visible
+          linkText="Zkusit znovu"
+          title1="Kousek vedle, zkus to znovu"
+        />
+      )
     } else {
-      skodik = <SkodikHelp
-          onClick={() => {this.setState({success: null})}}
+      skodik = (
+        <SkodikHelp
+          onClick={() => {
+            this.setState({ success: null })
+          }}
           visible={false}
           linkText="Už vím!"
           title1="Ovládání hry"
           text1="Jen zmáčkni vybranou karoserii a škodík ti řekne, jestli je správná"
           title2="Jak vypadá karoserie?"
-          text2="Copak jsi nikdy neviděl auto?"/>;
+          text2="Copak jsi nikdy neviděl auto?"
+        />
+      )
     }
 
     return (
