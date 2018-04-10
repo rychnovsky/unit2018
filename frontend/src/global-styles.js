@@ -1,7 +1,5 @@
 import { injectGlobal } from 'styled-components'
 import { colors } from './common/variables'
-import arLeft from './assets/img/arrow_left.svg'
-import arRight from './assets/img/arrow_right.svg'
 /* eslint no-unused-expressions: 0 */
 injectGlobal `
 
