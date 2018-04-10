@@ -10,7 +10,7 @@ const Lisovna = () => (
     text3="Na jednom auto je potřeba až 60 dílů."
     link="lisovna-hra"
     linkName="Do lisovny"
-    animTitle="Začínáme v lisovně,pojďme se podívat!"
+    animTitle="Začínáme v lisovně, pojďme se podívat!"
   />
 )
 

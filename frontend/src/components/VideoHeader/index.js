@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 const Iframe = styled.iframe `
     width: calc(100% + 40px);
-    margin-left: -20px;
     border: 0;
 `
 

@@ -12,7 +12,7 @@ const Wrap = styled.div `
   right: 25px;
   width: 60px;
   height: 60px;
-  border: 3px solid ${colors.darkGrey};
+  border: 3px solid ${colors.lightGrey};
   border-radius: 100px;
   display: flex;
   align-items: center;
