@@ -1,0 +1,9 @@
+export const LOAD_ALL_PRODUCTS = 'coraled/LOAD_ALL_PRODUCTS'
+export const LOAD_ALL_PRODUCTS_SUCCESS = 'coraled/LOAD_ALL_PRODUCTS_SUCCESS'
+export const LOAD_ALL_PRODUCTS_FAIL = 'coraled/LOAD_ALL_PRODUCTS_FAIL'
+
+export const LOAD_PRODUCT = 'coraled/LOAD_PRODUCT'
+export const LOAD_PRODUCT_SUCCESS = 'coraled/LOAD_PRODUCT_SUCCESS'
+export const LOAD_PRODUCT_FAIL = 'coraled/LOAD_PRODUCT_FAIL'
+
+export const SET_PRODUCT_ID = 'coraled/SET_PRODUCT_ID'
